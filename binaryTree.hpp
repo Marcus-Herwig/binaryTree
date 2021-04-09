@@ -1,11 +1,20 @@
-#include "node.hpp";
 class BinaryTree
 {
     private:
-        Node* root;
-        BinaryTree* tree;
+        int payload;
+        bool isEmpty;
+        BinaryTree* leftChild;
+        BinaryTree* rightChild;
+        int count;
+
     public:
-        BinaryTree(Node* n);
-        Node* insert(Node* node2add, Node* start);
-        void inOrder(Node* n);    
+        BinaryTree(); //creates an empty tree
+        BinaryTree(int payload);
+        void visitInOrder();
+        void visitPreOrder();
+        void visitPostOrder();
+        int getPayload();
+        void add(int payload);
+        int getCount();
+
 };
